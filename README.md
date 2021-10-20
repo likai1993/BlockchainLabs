@@ -17,7 +17,7 @@ Excersice 2
 ====
 The above excercise aims to implement the open auction protocol, in this excercise, you are required to implement a blinded auction protocol and write a **blindAuction** smart contract.  In a blinded auction, there are two periods, one is called bidding period when users need to submit their hash to hide their bidding amounts, the other is called reveal period when users need to reveal their real bidding amounts (the preimage of submitted hash) after the bidding period.
 
-The requirements of contract are:
+The requirements of the contract are:
 
 1. The contract deployer specifies the *biddimg time*, *reveal time*, and *beneficiary*.
 2. The insterested bidders should hide their real bidding amount by submitting a *hash* and depositing an arbitrary amount of value. Specifically, the hash is computed over a triplet of [fake (boolean), amount (int), secret(bytes32)]), each bidder needs to call this function multiple times to submit different hashes (computed from different triplets) to hide their real bids. 
