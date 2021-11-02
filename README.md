@@ -10,7 +10,7 @@ In this lab, you are expected to design an open auction smart contract **openAuc
 
 3. A funcion __auctionEnd()__ can be called after the bidding time which will select the bidder who submits the **second highest** bid as the winner. His deposit is transfered to the beneficiary.
 
-4. The other bidders losing the auction is able to call an __withdraw()__ to take back their deposits.
+4. The other bidders losing the auction is able to call the __withdraw()__ function to take back their deposits.
 
 Excersice 2
 ====
