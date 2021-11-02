@@ -2,16 +2,15 @@
 
 Excercise 1
 ====
-In this lab, you are expected to design an open auction smart contract **openAuction** using solidity programing language.
-Your code should implement the following logic.
+In this lab, you are expected to design an open auction smart contract **openAuction** using solidity programing language. In an open auction, every participant is able to see the highest bid in the current period. Your code should implement the following logic.
 
-1. The smart contract deployer specifies how long the *bidding time* will last for and who will be the *beneficiary* when deploying the contract. 
+1. Your contract constructor function should specify how long the *bidding time* will be and who will be the *beneficiary*.
 
-2. After the contract is deployed, within the bidding time, any insterested bidders can submit their bids and deposit the bidding value to the contract. After the bidding time, the contract does not accept any bids. 
+2. A function __submitBid()__ can accept bids from any pariticipants and accepts their deposits with the bidding time. After the bidding time, no one can submit bids. The function only accepts a bid that beats the current highest bid. Within the bidding time, each bidder can submit bids multiple times. 
 
-3. After the bidding time, the bidder submitting the **second highest** bid wins the auction, and his deposit is transfered to the beneficiary.
+3. A funcion __auctionEnd()__ can be called after the bidding time which will select the bidder who submits the **second highest** bid as the winner. His deposit is transfered to the beneficiary.
 
-4. The other bidders losing the auction is able to *withdraw* their deposits.
+4. The other bidders losing the auction is able to call an __withdraw()__ to take back their deposits.
 
 Excersice 2
 ====
