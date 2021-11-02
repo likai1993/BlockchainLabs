@@ -19,7 +19,7 @@ The above excercise aims to implement the open auction protocol, in this excerci
 
 The requirements of the contract are:
 
-1. The contract deployer specifies the *biddimg time*, *reveal time*, and *beneficiary*.
+1. The contract deployer specifies the *bidding time*, *reveal time*, and *beneficiary*.
 2. The insterested bidders should hide their real bidding amount by submitting a *hash* and depositing an arbitrary amount of value. Specifically, the hash is computed over a triplet of [fake (boolean), amount (int), secret(bytes32)]), each bidder needs to call this function multiple times to submit different hashes (computed from different triplets) to hide their real bids. 
 3. The contract only accept bids during the bidding time, and after that the reveal time ticker starts. 
 4. During the reveal time, each bidder need to reveal each of their previous submitted hash by sending the raw triplets to the contract. The contract then check if the hash of each raw triplet is equal to the submitted hash. If not, the contract do not allow the bidder to withdraw the corresponding deposits.
