@@ -14,7 +14,7 @@ In this exercise, you are expected to design an open auction smart contract **op
 
 Excersice 2
 ====
-In this excercise, you are required to implement a blinded auction protocol and write a **blindAuction** smart contract. In a blinded auction, paritipants are not allowed to see other bidder's bids and know the highest bid. There will be two time periods, the first one is called bidding period, within which each pariticipant can submit a hash string to represent their bids. The other is called reveal period, within which each pariticipant need to reveal their real bids (the preimage of submitted hash). The bidding period starts and ends strictly before the reveal period.
+In this excercise, you are required to implement a blinded auction protocol and write a **blindAuction** smart contract. In a blinded auction, paritipants are not allowed to see other bidders' bids and the highest bid. There will be two time periods, the first one is called bidding period, within which each pariticipant can submit a hash string to represent their bids. The other is called reveal period, within which each pariticipant need to reveal their real bids (the preimage of submitted hash). The bidding period starts and ends strictly before the reveal period.
 
 Your contract should implement the following lodic.
 
