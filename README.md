@@ -2,7 +2,7 @@
 
 Excercise 1
 ====
-In this lab, you are expected to design an open auction smart contract **openAuction** using solidity programing language. In an open auction, every participant is able to see the highest bid in the current period. Your code should implement the following logic.
+In this exercise, you are expected to design an open auction smart contract **openAuction** using solidity programing language. In an open auction, every participant is able to see the highest bid in the current period. Your code should implement the following logic.
 
 1. Your contract constructor function should specify how long the *bidding time* will be and who will be the *beneficiary*.
 
@@ -14,9 +14,9 @@ In this lab, you are expected to design an open auction smart contract **openAuc
 
 Excersice 2
 ====
-The above excercise aims to implement the open auction protocol, in this excercise, you are required to implement a blinded auction protocol and write a **blindAuction** smart contract.  In a blinded auction, there are two periods, one is called bidding period when users need to submit their hash to hide their bidding amounts, the other is called reveal period when users need to reveal their real bidding amounts (the preimage of submitted hash) after the bidding period.
+in this excercise, you are required to implement a blinded auction protocol and write a **blindAuction** smart contract. In a blinded auction, paritipants are not allowed to see other bidder's bids and know the highest bid. There will be two time periods, the first one is called bidding period, within which each pariticipant can submit a hash string to represent their bids. The other is called reveal period, within which each pariticipant need to reveal their real bids (the preimage of submitted hash). The bidding period starts and ends strictly before the reveal period.
 
-The requirements of the contract are:
+Your contract should implement the following lodic.
 
 1. The contract deployer specifies the *bidding time*, *reveal time*, and *beneficiary*.
 2. The insterested bidders should hide their real bidding amount by submitting a *hash* and depositing an arbitrary amount of value. Specifically, the hash is computed over a triplet of [fake (boolean), amount (int), secret(bytes32)]), each bidder needs to call this function multiple times to submit different hashes (computed from different triplets) to hide their real bids. 
