@@ -6,7 +6,7 @@ In this lab, you are expected to design an open auction smart contract **openAuc
 
 1. Your contract constructor function should specify how long the *bidding time* will be and who will be the *beneficiary*.
 
-2. A function __submitBid()__ can accept bids from any pariticipants and accepts their deposits with the bidding time. After the bidding time, no one can submit bids. The function only accepts a bid that beats the current highest bid. Within the bidding time, each bidder can submit bids multiple times. 
+2. A function __submitBid()__ can accept bids from any pariticipants and accepts their deposits within the bidding time. After the bidding time elapsed, no one can submit bids. The function only accepts a bid that beats the current highest bid. Within the bidding time, each bidder can submit bids multiple times. 
 
 3. A funcion __auctionEnd()__ can be called after the bidding time which will select the bidder who submits the **second highest** bid as the winner. His deposit is transfered to the beneficiary.
 
