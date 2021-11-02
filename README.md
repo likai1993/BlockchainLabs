@@ -19,7 +19,7 @@ In this excercise, you are required to implement a blinded auction protocol and 
 Your contract should implement the following lodic.
 
 1. The contract deployer specifies the *bidding time*, *reveal time*, and *beneficiary*.
-2. The insterested bidders should hide their real bidding amount by submitting a *hash* and depositing an arbitrary amount of value. Specifically, the hash is computed over a triplet of [fake (boolean), amount (int), secret(bytes32)]), each bidder needs to call this function multiple times to submit different hashes (computed from different triplets) to hide their real bids. 
+2. The insterested bidders should hide their real bids by submitting a *hash* and transfer an arbitrary amount of value as the deposit. Specifically, the hash can be computed from a triplet of [fake (boolean), amount (int), secret(bytes32)]), each bidder needs to call this function multiple times to submit different hashes (computed from different triplets) to hide their real bids. 
 3. The contract only accept bids during the bidding time, and after that the reveal time ticker starts. 
 4. During the reveal time, each bidder need to reveal each of their previous submitted hash by sending the raw triplets to the contract. The contract then check if the hash of each raw triplet is equal to the submitted hash. If not, the contract do not allow the bidder to withdraw the corresponding deposits.
 5. After the reveal time, the **second highest bidder** will be the winner and his deposit will be transfered to the beneficiary.
