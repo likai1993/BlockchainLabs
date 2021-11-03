@@ -1,4 +1,4 @@
-# Auction contracts
+# Auction Smart Contracts Lab
 
 Excercise 1
 ====
