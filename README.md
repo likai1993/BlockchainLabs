@@ -1,7 +1,7 @@
 # Auction Smart Contracts Lab
 
 Excercise 1
-====
+----
 In this exercise, you are expected to design an open auction smart contract **openAuction** using solidity programing language. In an open auction, every participant is able to see the highest bid in the current period. Your code should implement the following logic.
 
 1. Your contract constructor function should specify how long the *bidding time* will be and who will be the *beneficiary*.
@@ -13,7 +13,7 @@ In this exercise, you are expected to design an open auction smart contract **op
 4. The other bidders losing the auction is able to call the __withdraw()__ function to take back their deposits.
 
 Excersice 2
-====
+----
 In this excercise, you are required to implement a blinded auction protocol and write a **blindAuction** smart contract. In a blinded auction, paritipants are not allowed to see other bidders' bids and the highest bid. There will be two time periods, the first one is called bidding period, within which each pariticipant can submit a hash string to represent their bids. The other is called reveal period, within which each pariticipant need to reveal their real bids (the preimage of submitted hash). The bidding period starts and ends strictly before the reveal period.
 
 Your contract should implement the following logic.
