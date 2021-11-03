@@ -22,5 +22,18 @@ Your contract should implement the following lodic.
 2. The insterested bidders should hide their real bids by submitting a *hash* and transfer an arbitrary amount of value as the deposit. Specifically, the hash can be computed from a triplet of [fake (boolean), amount (int), secret(bytes32)]), each bidder needs to call this function multiple times to submit different hashes (computed from different triplets) to hide their real bids. 
 3. The contract only accept bids during the bidding period, and after that no one can submit bids and the reveal timer ticker starts. 
 4. During the reveal period, each bidder need to reveal each of their previous submitted hash by sending the raw triplets to the contract. The contract then check if the hash of each raw triplet is equal to the submitted hash. If not, the contract do not allow the bidder to withdraw the corresponding deposits.
-5. After the reveal time, the **second highest bidder** will be the winner and his deposit will be transfered to the beneficiary.
+5. After the reveal period, the **second highest bidder** will be the winner and his deposit will be transfered to the beneficiary.
 6. The other bidders losing the auction *withdraw* their deposits.
+
+__Hints__:
+1. You can implemment a pure function to compute the hash string for any given triplets and then submit the hash as a blinded bid.
+2. The bidders' deposits should be sent to the contract during bidding period. No deposit will be allowed after bidding peroid.
+3. If two bids are the same and equal to the highest bid, then who submits the bid later will be the winner. Similarly, if there are three or more bidders, then who submits the bid in the second earlist timestamp will be the winner.
+4. If the highest bid does not have two bids but the second highest bid has, then who submits the second highest bid in the earlist timestamp will be the winner.
+
+__FAQ__
+1. If there is no valid bid, what should the smart contract do? 
+   The auction will fail and there is no winner.
+2. If there is only one valid bid, what should the smart contract do?
+   The auction will fail and there is no winner.
+
