@@ -28,8 +28,8 @@ Your contract should implement the following logic.
 __Hints__:
 1. You can implemment a pure function to compute the hash string for any given triplets and then submit the hash as a blinded bid.
 2. The bidders' deposits should be sent to the contract during bidding period. No deposit will be allowed after bidding peroid.
-3. If two bids are the same and equal to the highest bid, then who submits the bid later will be the winner. Similarly, if there are three or more bidders, then who submits the bid in the second earlist timestamp will be the winner.
-4. If the highest bid does not have two bids but the second highest bid has, then who submits the second highest bid in the earlist timestamp will be the winner.
+3. During the reveal period, if two bids have the same amount of deposit that equal to the highest bid, then who submits the bid later will be the winner. Similarly, if there are three or more bidders, then who submits the bid in the second earlist timestamp will be the winner.
+4. Similarly, during the reveal period, if the highest bid does not have two bidders but the second highest bid has, then who submits the second highest bid in the earlist timestamp will be the winner.
 
 __FAQ__
 1. If there is no valid bid, what should the smart contract do? 
