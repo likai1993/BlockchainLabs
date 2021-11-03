@@ -37,7 +37,7 @@ __FAQ__
 2. If there is only one valid bid, what should the smart contract do?
    The auction will fail and there is no winner.
 
-__Deliverable__
-For all exercises, you should show the screenshot that you can execute your program successfully. For instance, in Exercise 1, your screenshort should show the execution of that different bidders submiting bids of different amounts, and the second highest bid wins the auction. In Exercise 2, your screenshort should show the execution of that different bidders submiting different hashes and revealing the preimage of the submitted hashes. Then the second highest bid wins the auction. 
-
-You should also submit the solidity program you wrote.
+Deliverable
+----
+1. For all exercises, you should show the screenshot that you can execute your program successfully. For instance, in Exercise 1, your screenshort should show the execution of that different bidders submiting bids of different amounts, and the second highest bid wins the auction. In Exercise 2, your screenshort should show the execution of that different bidders submiting different hashes and revealing the preimage of the submitted hashes. Then the second highest bid wins the auction. 
+2. You should also submit the solidity program you wrote.
